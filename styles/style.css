@@ -1,0 +1,324 @@
+body{
+  font: 16px/1.5 Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+/* Global */
+.container{   /* ho messo il punto prima di container perché è una classe, fosse stato un id mettevo il "#"  .*/
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+.button_1{      /* modifica tutte le classi che si chiamano "button" */
+  height: 38px;
+  background: #e8491d;
+  border: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #ffffff;
+}
+
+.dark{          /* modifica tutte le classi che si chiamano "dark" */
+  padding: 15px;
+  background: #35424a;
+  color: #ffffff;
+  margin-top: 10px;
+  margin-top: 10px;
+}
+
+.single-article{  /* qusto modifica le classi "single-article" create apposta per quando il testo è l'unico contenuto in orizzontale */
+  width: 90%;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+/* tutto quello che è la classe "evento" cioè descrizione di posizioni, scuole etc.. */
+.evento-sx p, .evento-dx p{
+  padding-bottom: 20px;
+  border-bottom: black 1px solid;
+}
+
+.evento-dx h3, .evento-dx h4{
+  text-align: right;
+}
+
+.evento-sx img{
+  margin-top: 20px;
+  float: right;
+  width: 30%;
+}
+
+#logo_istarter{   /* questo mi serve perché altrimenti il logo di istarter rimane troppo basso */
+  margin-top: -20px;
+}
+
+#logo_wineworks{  /* questo mi serve perché altrimenti quel cornuto del logo di wineworks diventa gigante e sfasa male */
+  margin-top: 10px;
+  margin-right: 10px;
+  width: 80px;
+}
+
+#logo_escp{
+  width: 130px;
+}
+
+#logo_polito{
+  height: 110px;
+  width: auto;
+}
+
+#logo_unito{
+  height: 110px;
+  width: auto;
+}
+
+#logo_liceo{
+  height: 110px;
+  width: auto;
+}
+
+#logo_enactus{
+  height: 90px;
+  width: auto;
+}
+
+#honeypot{        /* questo oscura l'honeypot presente nel contact form, ovvero evita lo spam */
+  display: none;
+}
+
+.evento-sx a{
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.evento-dx img{
+  margin-top: 20px;
+  float: left;
+  width: 15%;
+}
+
+.evento-dx a{
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Header */
+header{
+  background: #35424a;
+  color: #ffffff;
+  padding-top: 30px;
+  min-height: 70px;
+  border-bottom: #e8491d 3px solid;  /* questo crea la linea rossa sotto l'header */
+}
+
+header a{   /* questo modifica tutto lo stile dei link "a" dentro l'header */
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+header li{
+  float: left;      /* fa partire da sinistra i diversi li */
+  display: inline;  /* li fa visualizzare in orizzontale e non verticale come è di base*/
+  padding: 0 20px 0 20px; /* crea lo spazio a destra e sinistra tra un item e l'altro */
+}
+
+header #branding{ /* questo aggiunge "float: left" a tutti gli elementi con id=branding dell'header */
+  float: left;
+}
+
+header #branding h1{  /* questo aggiunge "margin: 0" soltanto agli elementi "h1" contenuti in elementi con id=branding dell'header */
+  margin: 0;
+}
+
+header nav{
+  float: right;
+  margin-top: 10px;
+}
+
+header .highlight, header .current a{  /* questo modifica la classe highlight contenuta nell'header e la classe current di "a" contenuta nell'header */
+  color: #e8491d;
+  font-weight: bold;
+}
+
+header a:hover{   /* questo modifica "a" dell'header quando ci passo il mous sopra, quindi il comando ":hover" */
+  color: #cccccc;
+  font-weight: bold;
+}
+
+/* section */
+section a{
+  color: #000000;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* vetrina */
+#vetrina{
+  min-height: 400px;
+  background: url('../images/vetrina1.jpg') no-repeat 0 0;  /* questo mette un immagine che abbiamo nella cartella img come sfondo e gli dice "qualunque sia l'immagine che voglio mettere, visto che le dimensioni di questa vetrina sono width:auto e height:400, mettimi il primo rettangolo in alto a sx con queste dimensioni "*/
+  background-position: center center;
+  text-align: center;
+  color: #ffffff;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+#vetrina h1{
+  margin-top: 100px;
+  font-size: 55px;
+  margin-bottom: 10px;
+}
+
+#vetrina p{
+  font-size: 20px;
+}
+
+/* newsletter */
+#newsletter{
+  padding: 15px;
+  color: #ffffff;
+  background: #35424a;
+}
+
+#newsletter h1{
+  float: left;
+}
+
+#newsletter form{
+  float: right;
+  margin-top: 15px;
+}
+
+#newsletter input[type="email"]{
+  padding: 4px;
+  height: 25px;
+  width: 250px;
+}
+
+/* boxes */
+#boxes{
+  margin-top: 20px;
+}
+
+#boxes .box{
+  float: left;
+  width: 30%;     /* questo width 30% applicato ai box li fa diventare poco meno di un terzo della larghezza della pagina e quindi permette di vederli uno vicino all'altro */
+  padding: 10px;
+  text-align: center;
+}
+
+#boxes .box img{
+  width: 90px;
+}
+
+/* sidebar */
+aside#sidebar{
+  float: right;
+  width: 30%;
+  margin-top: 20px;
+}
+
+aside#sidebar .quote input, aside#sidebar .quote textarea{
+  width: 90%;
+  padding: 5px;
+}
+
+ul#sidebar li{
+  list-style: none;
+  padding: 20px;
+  border: #cccccc solid 1px;
+  margin-bottom: 5px;
+  background: #e6e6e6;
+}
+
+/* main-col */
+article#main-col{
+  float: left;
+  width: 65%;
+}
+
+/* footer */
+footer{
+  margin-top: 20px;
+  padding: 20px;
+  color: #ffffff;
+  background-color: #e8491d;
+  text-align: center;
+}
+
+/* form-contact */
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.containerForm {
+    width: 50%;
+    margin: auto;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+/* Media Queries */
+@media(max-width: 768px) {
+  header #branding,
+  header nav,
+  header nav li,
+  #newsletter h1,
+  #newsletter form,
+  #boxes .box,
+  article#main-col,
+  aside#sidebar{
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  header{
+    padding-bottom: 20px;
+  }
+
+  #vetrina h1{
+    margin-top: 40px;
+  }
+
+  #newsletter button, .quote button{
+    display: block;
+    width: 100%;
+  }
+
+  #newsletter form input[type="email"], .quote input, .quote textarea{
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}

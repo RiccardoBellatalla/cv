@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="author" content="Riccardo Bellatalla">
+    <meta name="description" content="Website creato alla fine di svolgere funzione di CV digitale.">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Riccardo Bellatalla CV - Contatti</title>
+
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+    <header>
+      <div class="container">   <!-- Creo un container che "tenga tutto dentro", mi servirà per lasciare dello spazio a destra e sinistra del contenuto -->
+        <div id="branding">     <!-- Questo mi serve per definire la barra in alto con il logo a sinistra ed un menù navigabile a destra -->
+          <h1><span class="highlight">CV</span> Riccardo Bellatalla</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="esperienzelavorative.html">Esperienze Lavorative</a></li>
+            <li><a href="formazione.html">Formazione</a></li>
+            <li><a href="attivitaextra.html">Extra Attività</a></li>
+            <li class="current"><a href="#">Contatti</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+<!--
+    <section id="vetrina">
+      <div class="container">
+        <h1>Ed infine, ecco i miei contatti</h1>
+          <p>Studente, appasionato di tecnologia, viaggi e natura incontaminata.</p>
+      </div>
+    </section>
+-->
+
+    <section>
+      <div class="container">
+        <article class="single-article">
+          <h1 class="page-title">Contatti:</h1>
+          <p>eMail:   riccardo.bellatalla13@gmail.com <br>
+            mobile:   +393469879371 <br>
+            linkedin: Riccardo Bellatalla</p>
+          <p>Se quello che hai letto ti ha interessato o vuoi saperne di più, perché non compili questo piccolo form qui sotto per farmi sapere cosa ne pensi?!</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact_form">
+      <div class="containerForm">
+        <form id="gform "action="https://script.google.com/macros/s/AKfycbzuJLgy3vKr8d124ReZh__fv8OZelj5VDXTdRqHx6RTu10MPHYt/exec" method="POST" onsubmit="return validateMyForm();">
+          <fieldset>
+            <legend>Form per rimanere in contatto</legend>
+            <input type="text" name="honeypot" id="honeypot" />    <!-- questo input è un honeypot per evitare di ricevere spam attraverso il contact form, resource: https://jennamolby.com/how-to-prevent-form-spam-by-using-the-honeypot-technique/ -->
+            <label for="fname">Nome:</label><br>
+            <input type="text" name="nome" id="fname" placeholder="Il tuo nome.."><br><br>
+            <label for="surname">Cognome:</label><br>
+            <input type="text" name="cognome" id="surname" placeholder="Il tuo cognome.."><br><br>
+            <label for="email">eMail: (questa mi serve solo per ricontattarti, no spam at all!)</label><br>
+            <input type="email" name="email" id="email" placeholder="La tua mail.."><br><br>
+            <label for="testo">Testo:</label><br>
+            <input type="text" name="testo" id="testo" placeholder="Scrivi qualcosa.."><br><br>
+            <input type="submit" name="submit" value="Submit">
+          </fieldset>
+        </form>
+      </div>
+    </section>
+
+    <!-- questo script lavora con honeypot per evitare di ricevere spam attraverso il contact form, resource: https://jennamolby.com/how-to-prevent-form-spam-by-using-the-honeypot-technique/ -->
+    <script type="text/javascript">
+    	function validateMyForm() {
+    		// The field is empty, submit the form.
+    		if(!document.getElementById("honeypot").value) {
+    			return true;
+    		}
+    		 // the field has a value it's a spam bot
+    		else {
+    			return false;
+    		}
+    	}
+    </script>
+
+    <footer>
+      <p>Credits, Copyright &copy; 2018</p>
+    </footer>
+
+  </body>
+</html>
